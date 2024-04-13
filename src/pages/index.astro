@@ -1,0 +1,45 @@
+---
+// Component Imports
+import MainLayout from "../layouts/MainLayout.astro";
+import CTA from "../components/CTA.tsx";
+import Depoimentos from "../components/Depoimentos.astro";
+import Bonus from "../components/Bonus.astro";
+import FAQ from "../components/FAQ.astro";
+import Furadeira from "../components/Furadeira.astro";
+import Sobre from "../components/Sobre.astro";
+import Hero from "../components/Hero.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
+---
+
+<MainLayout>
+  <div class="flex flex-col h-screen bg-blue">
+    <Hero />
+    <CTA
+      client:load
+      params={Astro.url.searchParams.toString()}
+      label="Quero Aumentar Minha pRodução de leite"
+      ctaOption="1"
+    />
+    <Depoimentos />
+    <Furadeira />
+    <Bonus />
+    <CTA
+      client:load
+      params={Astro.url.searchParams.toString()}
+      price
+      label="Quero Aumentar Minha pRodução de leite"
+      ctaOption="2"
+    />
+    <Sobre />
+    <FAQ />
+    <CTA
+      client:load
+      params={Astro.url.searchParams.toString()}
+      price
+      label="Quero Aumentar Minha pRodução de leite"
+      ctaOption="3"
+    />
+  </div>
+</MainLayout>

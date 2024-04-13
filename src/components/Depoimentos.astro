@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets"
+import depo1 from '../img/depoimentos/1.jpg'
+import depo2 from '../img/depoimentos/2.jpg'
+import depo3 from '../img/depoimentos/3.jpg'
+import depo4 from '../img/depoimentos/4.jpg'
+import depo5 from '../img/depoimentos/5.jpg'
+import depo6 from '../img/depoimentos/6.jpg'
+import depo7 from '../img/depoimentos/7.jpg'
+import depo8 from '../img/depoimentos/8.jpg'
+import depo9 from '../img/depoimentos/9.jpg'
+
+
+let depoimentos = [depo1, depo2, depo3, depo4, depo5, depo6, depo7, depo8, depo9]
+---
+<div class="bg-blue text-cream my-2">
+    <h1 class="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+        Depoimentos das alunas que seguiram o método LactoFlow®️:
+      </h1>
+
+
+    <div class=" flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+        {depoimentos.map(depo => <Image width={340} height={500} loading="lazy"  alt="depoimentos" class="mx-auto rounded-xl" src={depo}/>)}
+    </div>
+</div>
