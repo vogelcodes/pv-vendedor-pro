@@ -2,48 +2,73 @@
 // Click button, get confetti!
 // Styled by Tailwind :)
 import YouTubePlayer from "../components/YouTubePlayer.astro";
+import VimeoPlayer from "./VimeoPlayer.astro";
 import { Image } from "astro:assets";
 import arrowDown from "../img/arrow-down.svg";
-import logo from "../img/logo.svg";
+import logo from "../img/logo.webp";
 ---
 
-<div class="flex flex-col items-center justify-center py-2 text-cream sm:py-4">
+<div
+  class="flex flex-col items-center justify-center py-2 gap-2 text-slate-50 sm:py-4"
+>
   <div class="w-[180px] sm:w-[300px]">
     <Image loading="eager" src={logo} alt="logo" width={300} height={120} />
   </div>
   <h1
-    class="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-black uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]"
+    class="mt-6 px-4 text-center text-2xl italic font-black leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]"
   >
-    Aprenda como{" "}
-    <span class="text-[25px] text-red-400 sm:text-[35px]">
-      aumentar a sua produção
-    </span>{" "}
-    de leite e ofereça o{" "}
-    <span class="text-[25px] text-green sm:text-[35px]">
-      melhor alimento do mundo
-    </span>{" "}
-    ao seu bebê.
+    Se você vende para outras empresas, se trabalha no <span
+      class="text-red-400"
+    >
+      B2B
+    </span>,você não precisa se desesperar todo fim de mês e nem pensar em mudar
+    de profissão
   </h1>
 
   <p
+    class="mx-auto w-[95%] max-w-[600px] text-slate-50 text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]"
+  >
+    Pois até o vendedor que acha que não tem o "perfil ideal" de um vendedor
+    consegue dobrar suas comissões e ganhar mais do que se estivesse em
+    praticamente qualquer outra profissão!
+  </p>
+  <p
     class="mx-auto w-[80%] max-w-[600px] text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]"
   >
-    Assista a essa aula gratuita e comece a aumentar a sua produção de leite <span
-      class="font-black text-red-100">HOJE MESMO</span
-    >
+    Assista o vídeo abaixo e você vai aprender 3 coisas:
   </p>
+  <ol class="ml-6 list-inside list-decimal">
+    <li class="mb-3">
+      Como fazer parte dos vendedores que têm o bolso recheado de GRANDES
+      COMISSÕES;
+    </li>
+
+    <li class="mb-3">
+      Como fazer SEUS CLIENTES TE ENXERGAREM de uma forma totalmente
+      diferenciada DO QUE ELES ENXERGAM OUTROS VENDEDORES (e assim comprarem de
+      você mais do que eles compram de outros vendedores);
+    </li>
+
+    <li class="mb-3">
+      Como você pode ter orgulho da sua profissão, e também fazer a SUA FAMÍLIA
+      TER ORGULHO DE VOCÊ, por ser um vendedor profissional!
+    </li>
+  </ol>
   <div class="m-2">
-    <Image
-      loading="eager"
-      class="ml-2 animate-bounce"
-      src={arrowDown}
-      alt="one"
-    />
+    <p class="text-center">
+      Ps: esse negócio de "perfil ideal" de vendedor NÃO EXISTE! Assiste o vídeo
+      que você vai entender melhor.
+    </p>
   </div>
+  <Image
+    loading="eager"
+    class="ml-2 animate-bounce"
+    src={arrowDown}
+    alt="one"
+  />
 
   <div class="w-full">
-    <div class="mx-auto w-[95%] max-w-[600px]">
-      <YouTubePlayer class="" id="eXp3-bclWPs" title="LactoFlow®️" />
-    </div>
+    <div class="mx-auto w-[95%] max-w-[600px]"></div>
+    <VimeoPlayer />
   </div>
 </div>

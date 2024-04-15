@@ -1,23 +1,20 @@
 ---
 const { content } = Astro.props;
-import '@fontsource/metropolis/900.css';
-import '@fontsource/metropolis/700.css';
-import '@fontsource/metropolis/400.css';
-
+import "@fontsource/roboto/400.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta
-		name="description"
-		content="Método para aumentar a produção de leite materno"
-	  />
-		<title>LactoFlow®️</title>
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Método para aumentar a produção de leite materno"
+    />
+    <title>LactoFlow®️</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body class="bg-blue">
+    <slot />
+  </body>
 </html>
