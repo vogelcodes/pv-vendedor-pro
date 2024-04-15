@@ -50,7 +50,9 @@
     .forEach((button) =>
       button.addEventListener("click", () => {
         const video = button.previousElementSibling;
-        video.src = video.dataset.src;
+        if (video instanceof HTMLVideoElement) {
+          video.src = video.dataset.src;
+        }
       })
     );
 </script>
