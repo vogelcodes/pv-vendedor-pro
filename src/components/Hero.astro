@@ -9,7 +9,7 @@ import logo from "../img/logo.webp";
 ---
 
 <div
-  class="flex flex-col items-center justify-center py-2 gap-2 text-slate-50 sm:py-4"
+  class="flex flex-col items-center max-w-[800px] mx-auto justify-center py-2 gap-2 text-slate-50 sm:py-4"
 >
   <div class="w-[180px] sm:w-[300px]">
     <Image loading="eager" src={logo} alt="logo" width={300} height={120} />
@@ -37,23 +37,36 @@ import logo from "../img/logo.webp";
   >
     Assista o vídeo abaixo e você vai aprender 3 coisas:
   </p>
-  <ol class="ml-6 list-inside list-decimal">
-    <li class="mb-3">
-      Como fazer parte dos vendedores que têm o bolso recheado de GRANDES
-      COMISSÕES;
-    </li>
 
-    <li class="mb-3">
-      Como fazer SEUS CLIENTES TE ENXERGAREM de uma forma totalmente
-      diferenciada DO QUE ELES ENXERGAM OUTROS VENDEDORES (e assim comprarem de
-      você mais do que eles compram de outros vendedores);
-    </li>
+  <div class="grid grid-cols-1 max-w-[600px] items-center gap-2 lg:mt-4">
+    <!-- <div
+      class="flex h-[3rem] w-[3rem] items-center justify-center rounded-full border-[2px] border-green"
+    >
+      <span class="text-2xl text-cream">1</span>
+    </div> -->
+    <p
+      class="text-[15.67px] font-medium leading-[22.9px] tracking-[-25] lg:text-[16.75px]"
+    >
+      1. Como fazer parte dos vendedores que têm o bolso recheado de <span
+        class="text-cream">GRANDES COMISSÕES</span
+      >;
+    </p>
 
-    <li class="mb-3">
-      Como você pode ter orgulho da sua profissão, e também fazer a SUA FAMÍLIA
-      TER ORGULHO DE VOCÊ, por ser um vendedor profissional!
-    </li>
-  </ol>
+    <p
+      class="text-[15.67px] font-medium leading-[22.9px] tracking-[-25] lg:text-[16.75px]"
+    >
+      2. Como fazer <span class="text-cream">SEUS CLIENTES TE ENXERGAREM</span> de
+      uma forma totalmente diferenciada DO QUE ELES ENXERGAM OUTROS VENDEDORES (e
+      assim comprarem de você mais do que eles compram de outros vendedores);
+    </p>
+    <p
+      class="text-[15.67px] font-medium leading-[22.9px] tracking-[-25] lg:text-[16.75px]"
+    >
+      3. Como você pode ter orgulho da sua profissão, e também fazer a SUA
+      FAMÍLIA <span class="text-cream">TER ORGULHO DE VOCÊ</span>, por ser um
+      vendedor profissional!
+    </p>
+  </div>
   <div class="m-2">
     <p class="text-center">
       Ps: esse negócio de "perfil ideal" de vendedor NÃO EXISTE! Assiste o vídeo
