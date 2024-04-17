@@ -57,7 +57,7 @@ export default function CTA({
     // fetch(gsheetUrl,)
     console.log(formatPhoneNumber(value || ""));
     window.open(
-      `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
+      `https://payfast.greenn.com.br/17338/offer/X8jC8R?ch_id=3980&email=${email}&phoneac=${
         formatPhoneNumber(value ?? "") || ""
         // value
       }&name=${name}&${params}`
@@ -74,7 +74,7 @@ export default function CTA({
           <button
             onClick={() => openModal(ctaOption)}
             data-umami-event={`cta-${ctaOption}-click`}
-            className="text-white my-2 rounded-lg border-b-4 border-b-[#236C0F] bg-[#207928] px-16 py-3 text-xl font-extrabold uppercase text-[#FEFEFE] hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5"
+            className="text-white my-2 rounded-lg border-b-4 border-b-[#236C0F] bg-[#207928] px-16 py-3 text-lg font-extrabold uppercase text-[#FEFEFE] hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5"
           >
             {label}
           </button>
@@ -176,7 +176,10 @@ export default function CTA({
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-start justify-center bg-blue bg-opacity-70 p-4 text-center">
+            <div
+              className="flex min-h-full items-start justify-center bg-blue-400
+             bg-opacity-70 p-4 text-center"
+            >
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -186,18 +189,19 @@ export default function CTA({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="bg-white mt-4 w-full max-w-md transform overflow-hidden rounded-2xl bg-green p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="bg-blue mt-4 w-full max-w-md transform overflow-hidden rounded-2xl p-6 text-left align-middle shadow-xl transition-all">
                   <span
-                    className="absolute right-5 top-3 cursor-pointer font-extrabold text-blue"
+                    className="absolute right-5 top-3 cursor-pointer font-extrabold "
                     onClick={closeModal}
                   >
                     ✖
                   </span>
                   <Dialog.Title
                     as="h3"
-                    className="text-2xl leading-6 text-blue"
+                    className="text-xl leading-6 text-slate-50"
                   >
-                    Preencha esse formulário e entre para o LactoFlow
+                    Preencha esse formulário e descubra como aumentar suas
+                    comissões nas vendas B2B!
                   </Dialog.Title>
                   <div className="mt-2">
                     <form
@@ -211,7 +215,7 @@ export default function CTA({
                         name="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="Nome"
+                        placeholder="Nome completo"
                       />
                       <label htmlFor="celular">Email</label>
                       <input
@@ -221,7 +225,7 @@ export default function CTA({
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="maeincrivel@email.com"
+                        placeholder="Seu melhor email"
                       />
                       <label htmlFor="celular">Celular</label>
                       <PhoneInput
@@ -232,6 +236,7 @@ export default function CTA({
                         value={value}
                         defaultCountry="BR"
                         onChange={setValue}
+                        placeholder="Seu WhatsApp"
                       />
                       {/* <a
                           target="_blank"
@@ -243,11 +248,11 @@ export default function CTA({
                         type="submit"
                         className="mx-auto mt-4 rounded-lg border-b-4 border-b-[#236C0F] bg-[#207928] px-2 py-3 text-[13.6px] font-extrabold uppercase text-[#FEFEFE] hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                       >
-                        Quero aumentar minha produção de leite
+                        Quero aumentar minhas comissões
                       </button>
                     </form>
                     {/* </a> */}
-                    <h3 className="text-center text-base text-blue">
+                    <h3 className="text-center text-base text-slate-50">
                       SEUS DADOS ESTÃO SEGUROS
                     </h3>
                   </div>
