@@ -1,25 +1,77 @@
 ---
-import { Image } from "astro:assets"
-import depo1 from '../img/depoimentos/1.jpg'
-import depo2 from '../img/depoimentos/2.jpg'
-import depo3 from '../img/depoimentos/3.jpg'
-import depo4 from '../img/depoimentos/4.jpg'
-import depo5 from '../img/depoimentos/5.jpg'
-import depo6 from '../img/depoimentos/6.jpg'
-import depo7 from '../img/depoimentos/7.jpg'
-import depo8 from '../img/depoimentos/8.jpg'
-import depo9 from '../img/depoimentos/9.jpg'
+import { Image } from "astro:assets";
+import depo1 from "../img/depoimentos/1.jpg";
+import depo2 from "../img/depoimentos/2.jpg";
+import depo3 from "../img/depoimentos/3.jpg";
+import depo4 from "../img/depoimentos/4.jpg";
+import depo5 from "../img/depoimentos/5.jpg";
+import depo6 from "../img/depoimentos/6.jpg";
+import depo7 from "../img/depoimentos/7.jpg";
+import depo8 from "../img/depoimentos/8.jpg";
+import depo9 from "../img/depoimentos/9.jpg";
 
-
-let depoimentos = [depo1, depo2, depo3, depo4, depo5, depo6, depo7, depo8, depo9]
+let depoimentos = [
+  depo1,
+  depo2,
+  depo3,
+  depo4,
+  depo5,
+  depo6,
+  depo7,
+  depo8,
+  depo9,
+];
 ---
-<div class="bg-blue text-cream my-2">
-    <h1 class="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-        Depoimentos das alunas que seguiram o método LactoFlow®️:
-      </h1>
 
-
-    <div class=" flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-        {depoimentos.map(depo => <Image width={340} height={500} loading="lazy"  alt="depoimentos" class="mx-auto rounded-xl" src={depo}/>)}
+<div class="bg-blue text-zinc-50 my-2">
+  <h1
+    class="mb-[14.4px] mt-6 px-4 text-center text-cream text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]"
+  >
+    Veja alguns resultados dos alunos do O Vendedor Profissional
+  </h1>
+  <div
+    class="flex flex-col max-w-[1200px] lg:flex-row gap-2 items-center mx-auto"
+  >
+    <div class="w-full min-w-[50%]">
+      <lite-youtube videoid="hg02HD_GIvg"></lite-youtube>
     </div>
+    <p class="px-4 lg:text-2xl">
+      O Nabote percebia o potencial que tinha para ganhar mais, mas se sentia
+      estagnado. Foi então que procurou formas de se aprimorar, achou as
+      técnicas de vendas complexas do O Vendedor Profissional e mesmo durante a
+      pandemia conseguiu aumentar suas vendas, o que fez inclusive com que ele
+      recebesse uma nova oportunidade de trabalho!
+    </p>
+  </div>
+  <div
+    class="flex flex-col max-w-[1200px] lg:flex-row-reverse gap-2 items-center mx-auto"
+  >
+    <div class="w-full min-w-[50%]">
+      <lite-youtube videoid="xJIwJzHXe8Q"></lite-youtube>
+    </div>
+    <p class="px-4 lg:text-2xl">
+      Frustração, chorar de raiva, início de depressão… Se você já sentiu isso,
+      você vai se identificar com o Murillo. Mas ao invés de se colocar de
+      vítima, ele se colocou como protagonista do próprio futuro e saiu de uma
+      venda de R$ 60 mil no ano para líder de uma equipe comercial na maior
+      produtora mundial de medicamentos animais, chegando aos R$ 10 milhões de
+      faturamento.
+    </p>
+  </div>
+  <!-- <div
+    class="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      depoimentos.map((depo) => (
+        <Image
+          width={340}
+          height={500}
+          loading="lazy"
+          alt="depoimentos"
+          class="mx-auto rounded-xl"
+          src={depo}
+        />
+      ))
+    }
+  </div> -->
 </div>
