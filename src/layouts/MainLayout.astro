@@ -3,6 +3,8 @@ const { content } = Astro.props;
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/700.css";
 import "@fontsource/roboto/900.css";
+import { Image } from "astro:assets";
+import wppLogo from "../img/wpp-logo.svg";
 ---
 
 <html lang="en">
@@ -40,5 +42,24 @@ import "@fontsource/roboto/900.css";
   </head>
   <body class="bg-blue">
     <slot />
+    <div class="fixed bottom-5 right-5 cursor-pointer">
+      <div class="relative h-[60px] w-[60px]">
+        <a
+          target="_blank"
+          href="https://wa.me/5548991113894?text=Estou%20na%20p%C3%A1gina%20do%20O%20Vendedor%20Profissional%20e%20quero%20mais%20informa%C3%A7%C3%B5es"
+        >
+          <span>
+            <Image
+              width={60}
+              height={60}
+              alt="whats logo"
+              src={wppLogo}
+              decoding="async"
+              data-nimg="fill"
+            />
+          </span>
+        </a>
+      </div>
+    </div>
   </body>
 </html>
