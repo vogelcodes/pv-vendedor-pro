@@ -8,6 +8,7 @@ import FAQ from "../components/FAQ.astro";
 import Furadeira from "../components/Furadeira.astro";
 import Sobre from "../components/Sobre.astro";
 import Hero from "../components/Hero.astro";
+import Furadeira2 from "../components/Furadeira2.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -24,7 +25,6 @@ import Hero from "../components/Hero.astro";
     />
     <Furadeira />
     <Depoimentos />
-    <Bonus />
     <CTA
       client:load
       params={Astro.url.searchParams.toString()}
@@ -32,6 +32,8 @@ import Hero from "../components/Hero.astro";
       label="QUERO GANHAR GRANDES COMISSÕES COM O B2B"
       ctaOption="2"
     />
+    <Furadeira2 />
+    <Bonus />
     <Sobre />
     <FAQ />
     <CTA
